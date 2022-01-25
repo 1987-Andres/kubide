@@ -2,7 +2,9 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsuariosController } from './usuarios/usuarios.controller';
+import { MensajesController } from './mensajes/mensajes.controller';
+import { MensajesService } from './mensajes/mensajes.service';
+import { Mensaje } from './mensajes/entities/mensaje.entity';
 
 @Module({
   imports: [
@@ -15,9 +17,10 @@ import { UsuariosController } from './usuarios/usuarios.controller';
       database: 'kubide_api',
       entities: ["dist/**/*.entity{.ts,.js}"],
       synchronize: true,
-    })
+    }),
+    TypeOrmModule.forFeature([Mensaje])
   ],
-  controllers: [AppController, UsuariosController],
-  providers: [AppService],
+  controllers: [AppController, MensajesController],
+  providers: [AppService, MensajesService],
 })
 export class AppModule { }

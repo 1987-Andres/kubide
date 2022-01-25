@@ -7,18 +7,9 @@ export class Usuario {
     id: number;
 
     @Column()
-    usuario: string;
+    nick: string;
 
     @Column()
-    password: string;
-
-    @Column()
-    email: string;
-
-    @Column()
-    pais: string;
-
-    @Column()
-    edad: number;
+    mensaje: string;
 
 }

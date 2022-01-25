@@ -9,7 +9,7 @@ import { UsuariosController } from './usuarios/usuarios.controller';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
-      port: 3006,
+      port: 3306,
       username: 'andres',
       password: 'kubide',
       database: 'kubide_api',

@@ -12,7 +12,9 @@ import { UsuariosController } from './usuarios/usuarios.controller';
       port: 3006,
       username: 'andres',
       password: 'kubide',
-      autoLoadEntities: true
+      database: 'kubide_api',
+      entities: ["dist/**/*.entity{.ts,.js}"],
+      synchronize: true,
     })
   ],
   controllers: [AppController, UsuariosController],

@@ -15,7 +15,7 @@ import { Mensaje } from './mensajes/entities/mensaje.entity';
       username: 'andres',
       password: 'kubide',
       database: 'kubide_api',
-      entities: ["dist/**/*.entity{.ts,.js}"],
+      entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
     TypeOrmModule.forFeature([Mensaje])

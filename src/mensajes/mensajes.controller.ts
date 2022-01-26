@@ -1,9 +1,8 @@
 import { Body, Controller, Delete, Get, HttpStatus, Param, Post, Put, Res } from '@nestjs/common';
-import { response } from 'express';
 import { CreateMensajeDto } from './dto/create-mensaje-dto';
 import { MensajesService } from './mensajes.service';
 
-@Controller('usuarios')
+@Controller('mensajes')
 export class MensajesController {
 
     constructor(private mensajesServices: MensajesService) {

@@ -34,7 +34,6 @@ export class AppController {
     }
 
     let iguales = bcrypt.compareSync(password, user.password);
-    Logger.log(iguales)
     if (!iguales) {
       throw new BadRequestException('Usuario y/o contraseña incorrectos');
     }

@@ -1,4 +1,8 @@
-Peticiones:
+La api esta en mi repositorio de github https://github.com/habemur/kubide.git
+
+Hay que bajarsela, hacer npm install y despues entrar en la terminal en la ruta de la api y poner npm start.
+
+Aqui te dejo las rutas de las peticiones con Postman para que las pruebes, estan a traves de localhost.
 
 Crear mensaje => POST http://localhost:3000/mensajes
 {"nick": "", "mensaje": ""}
@@ -10,14 +14,14 @@ Editar mensajes => PUT http://localhost:3000/mensajes/:id
 
 Eliminar mensaje => DELETE http://localhost:3000/mensajes/:id
 
-Registro => POST http://localhost:3000/api/register
+Registro con email unico=> POST http://localhost:3000/api/register
 {
     "name": "",
     "email": "",
     "password": ""
 }
 
-Login => POST http://localhost:3000/api/login
+Login con error si pones mal email y/o password => POST http://localhost:3000/api/login
 {
     "email": "",
     "password": ""
